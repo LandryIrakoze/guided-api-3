@@ -2,6 +2,23 @@ const express = require('express');
 
 const server = express();
 
-const port = 8000;
+server.get('/', (req, res) => {
+    res.status(200).json({ api: 'up' })
+})
 
-server.listen(port, () => console.log(`\n** API on port ${port} **\n`))
+// manage products (8 endpoints)
+// manage clients (8)
+// manage orders (8)
+// manage suppliers (8)
+
+// server.get('/products', (req, res) => {
+
+// })
+// server.get('/clients', (req, res) => {
+
+// })
+// server.get('/suppliers', (req, res) => {
+
+// })
+
+module.exports = server;

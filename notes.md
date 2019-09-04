@@ -20,3 +20,7 @@ Express APIs are broken up into routes
 ## client server architecture
 
 [client] <network (JSON)> [api] <> [data sources]
+
+## request / response cycle
+
+1. client makes a request
