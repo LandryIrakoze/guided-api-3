@@ -1,7 +1,18 @@
 const express = require('express');
 
+const productsRouter = require('../routes/products/products-router.js.js');
+const clientsRouter = require('../routes/clients/clients-router');
+const suppliersRouter = require('../routes/suppliers/suppliers-router');
+
 const server = express();
 
+// global middleware 
+server.use(express.json());
+server.use('/products', productsRouter);
+server.use('/clients', clientsRouter);
+server.use('/suppliers', suppliersRouter);
+
+// route handlers
 server.get('/', (req, res) => {
     res.status(200).json({ api: 'up' })
 })
@@ -11,14 +22,5 @@ server.get('/', (req, res) => {
 // manage orders (8)
 // manage suppliers (8)
 
-// server.get('/products', (req, res) => {
-
-// })
-// server.get('/clients', (req, res) => {
-
-// })
-// server.get('/suppliers', (req, res) => {
-
-// })
-
+//export default server
 module.exports = server;

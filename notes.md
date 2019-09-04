@@ -23,4 +23,15 @@ Express APIs are broken up into routes
 
 ## request / response cycle
 
-1. client makes a request
+1. client makes a request to a server
+2. server produces a response and sents it to the client
+
+[client] > request > [mw > mw > mw] > responds [client]
+
+# Middleware
+
+- can see the request and do something with the information from the request
+- can stop the request and produce a response
+- can do nothing
+- can do the same with the response object
+- **can modify the request or response object**
