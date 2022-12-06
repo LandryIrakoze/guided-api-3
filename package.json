@@ -20,7 +20,7 @@
   "homepage": "https://github.com/LandryIrakoze/guided-api-3#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "helmet": "^3.21.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.2"
